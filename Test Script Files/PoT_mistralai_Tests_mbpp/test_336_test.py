@@ -1,0 +1,66 @@
+import unittest
+from mbpp_336_code import months
+
+class TestCheckMonthnum(unittest.TestCase):
+    def test_typical_cases(self):
+        for month in months:
+            if month != months.december and month != months.february:
+                self.assertFalse(check_monthnum(month.name))
+
+    def test_edge_cases(self):
+        self.assertFalse(check_monthnum("January"))
+        self.assertFalse(check_monthnum("March"))
+        self.assertFalse(check_monthnum("April"))
+        self.assertFalse(check_monthnum("May"))
+        self.assertFalse(check_monthnum("June"))
+        self.assertFalse(check_monthnum("July"))
+        self.assertFalse(check_monthnum("August"))
+        self.assertFalse(check_monthnum("November"))
+        self.assertFalse(check_monthnum("December"))
+        self.assertFalse(check_monthnum("January-February"))
+        self.assertFalse(check_monthnum("February-March"))
+        self.assertFalse(check_monthnum("March-April"))
+        self.assertFalse(check_monthnum("April-May"))
+        self.assertFalse(check_monthnum("May-June"))
+        self.assertFalse(check_monthnum("June-July"))
+        self.assertFalse(check_monthnum("July-August"))
+        self.assertFalse(check_monthnum("August-November"))
+        self.assertFalse(check_monthnum("November-December"))
+        self.assertFalse(check_monthnum("December-January"))
+
+    def test_boundary_cases(self):
+        self.assertFalse(check_monthnum(""))
+        self.assertFalse(check_monthnum(None))
+        self.assertFalse(check_monthnum("   "))
+        self.assertFalse(check_monthnum("February "))
+        self.assertFalse(check_monthnum("February\n"))
+        self.assertFalse(check_monthnum("February,"))
+        self.assertFalse(check_monthnum("February."))
+        self.assertFalse(check_monthnum("February!"))
+        self.assertFalse(check_monthnum("February?"))
+        self.assertFalse(check_monthnum("February-"))
+        self.assertFalse(check_monthnum("-February"))
+        self.assertFalse(check_monthnum("February-February"))
+        self.assertFalse(check_monthnum("FebruaryFebruary"))
+        self.assertFalse(check_monthnum("February1"))
+        self.assertFalse(check_monthnum("February2"))
+        self.assertFalse(check_monthnum("February31"))
+        self.assertFalse(check_monthnum("February32"))
+        self.assertFalse(check_monthnum("February33"))
+        self.assertFalse(check_monthnum("February34"))
+        self.assertFalse(check_monthnum("February35"))
+        self.assertFalse(check_monthnum("February36"))
+        self.assertFalse(check_monthnum("February37"))
+        self.assertFalse(check_monthnum("February38"))
+        self.assertFalse(check_monthnum("February39"))
+        self.assertFalse(check_monthnum("February40"))
+        self.assertFalse(check_monthnum("February41"))
+        self.assertFalse(check_monthnum("February42"))
+        self.assertFalse(check_monthnum("February43"))
+        self.assertFalse(check_monthnum("February44"))
+        self.assertFalse(check_monthnum("February45"))
+        self.assertFalse(check_monthnum("February46"))
+        self.assertFalse(check_monthnum("February47"))
+        self.assertFalse(check_monthnum("February48"))
+        self.assertFalse(check_monthnum("February49"))
+        self.assertFalse(check_monthnum("Febru

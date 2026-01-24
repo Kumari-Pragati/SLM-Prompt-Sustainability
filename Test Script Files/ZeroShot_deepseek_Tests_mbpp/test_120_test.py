@@ -1,0 +1,15 @@
+import unittest
+from mbpp_120_code import max_product_tuple
+
+class TestMaxProductTuple(unittest.TestCase):
+
+    def test_max_product_tuple(self):
+        self.assertEqual(max_product_tuple([(1, 2), (3, 4), (5, -6)]), 24)
+        self.assertEqual(max_product_tuple([(-1, -2), (-3, -4), (-5, 6)]), -60)
+        self.assertEqual(max_product_tuple([(1, 2), (3, 4), (5, 6)]), 60)
+        self.assertEqual(max_product_tuple([(-1, -2), (-3, -4), (5, 6)]), 60)
+        self.assertEqual(max_product_tuple([(1, 2), (-3, -4), (-5, 6)]), 60)
+        self.assertEqual(max_product_tuple([(-1, -2), (3, 4), (-5, 6)]), 60)
+        self.assertEqual(max_product_tuple([(1, 2), (3, 4), (5, -6)]), 24)
+        self.assertEqual(max_product_tuple([(1, 2), (3, 4), (5, 6)]), 60)
+        self.assertEqual(max_product_tuple([(-1, -2), (-3, -4), (-5, -6)]), 10)

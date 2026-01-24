@@ -1,0 +1,31 @@
+import unittest
+from mbpp_492_code import binary_search
+
+class TestBinarySearch(unittest.TestCase):
+    def test_found_item(self):
+        item_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self.assertTrue(binary_search(item_list, 5))
+
+    def test_not_found_item(self):
+        item_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        self.assertFalse(binary_search(item_list, 11))
+
+    def test_empty_list(self):
+        item_list = []
+        self.assertFalse(binary_search(item_list, 5))
+
+    def test_single_item_list(self):
+        item_list = [5]
+        self.assertTrue(binary_search(item_list, 5))
+
+    def test_edge_case_found_at_start(self):
+        item_list = [1, 2, 3, 4, 5]
+        self.assertTrue(binary_search(item_list, 1))
+
+    def test_edge_case_found_at_end(self):
+        item_list = [1, 2, 3, 4, 5]
+        self.assertTrue(binary_search(item_list, 5))
+
+    def test_edge_case_found_at_middle(self):
+        item_list = [1, 2, 3, 4, 5]
+        self.assertTrue(binary_search(item_list, 3))

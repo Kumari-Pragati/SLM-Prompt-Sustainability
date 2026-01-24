@@ -1,0 +1,57 @@
+import unittest
+from mbpp_735_code import toggle_middle_bits
+
+class TestToggleMiddleBits(unittest.TestCase):
+
+    def test_toggle_middle_bits_typical(self):
+        self.assertEqual(toggle_middle_bits(0), 0)
+        self.assertEqual(toggle_middle_bits(1), 1)
+        self.assertEqual(toggle_middle_bits(2), 3)
+        self.assertEqual(toggle_middle_bits(3), 3)
+        self.assertEqual(toggle_middle_bits(4), 0)
+        self.assertEqual(toggle_middle_bits(5), 5)
+        self.assertEqual(toggle_middle_bits(6), 7)
+        self.assertEqual(toggle_middle_bits(7), 7)
+        self.assertEqual(toggle_middle_bits(8), 0)
+        self.assertEqual(toggle_middle_bits(9), 9)
+        self.assertEqual(toggle_middle_bits(10), 11)
+        self.assertEqual(toggle_middle_bits(11), 11)
+        self.assertEqual(toggle_middle_bits(12), 0)
+        self.assertEqual(toggle_middle_bits(13), 13)
+        self.assertEqual(toggle_middle_bits(14), 15)
+        self.assertEqual(toggle_middle_bits(15), 15)
+
+    def test_toggle_middle_bits_edge(self):
+        self.assertEqual(toggle_middle_bits(16), 0)
+        self.assertEqual(toggle_middle_bits(17), 17)
+        self.assertEqual(toggle_middle_bits(18), 19)
+        self.assertEqual(toggle_middle_bits(19), 19)
+        self.assertEqual(toggle_middle_bits(20), 0)
+        self.assertEqual(toggle_middle_bits(21), 21)
+        self.assertEqual(toggle_middle_bits(22), 23)
+        self.assertEqual(toggle_middle_bits(23), 23)
+        self.assertEqual(toggle_middle_bits(24), 0)
+        self.assertEqual(toggle_middle_bits(25), 25)
+        self.assertEqual(toggle_middle_bits(26), 27)
+        self.assertEqual(toggle_middle_bits(27), 27)
+        self.assertEqual(toggle_middle_bits(28), 0)
+        self.assertEqual(toggle_middle_bits(29), 29)
+        self.assertEqual(toggle_middle_bits(30), 31)
+        self.assertEqual(toggle_middle_bits(31), 31)
+
+    def test_toggle_middle_bits_error(self):
+        self.assertEqual(toggle_middle_bits(-1), -1)
+        self.assertEqual(toggle_middle_bits(-2), -3)
+        self.assertEqual(toggle_middle_bits(-3), -3)
+        self.assertEqual(toggle_middle_bits(-4), -4)
+        self.assertEqual(toggle_middle_bits(-5), -5)
+        self.assertEqual(toggle_middle_bits(-6), -7)
+        self.assertEqual(toggle_middle_bits(-7), -7)
+        self.assertEqual(toggle_middle_bits(-8), -8)
+        self.assertEqual(toggle_middle_bits(-9), -9)
+        self.assertEqual(toggle_middle_bits(-10), -11)
+        self.assertEqual(toggle_middle_bits(-11), -11)
+        self.assertEqual(toggle_middle_bits(-12), -12)
+        self.assertEqual(toggle_middle_bits(-13), -13)
+        self.assertEqual(toggle_middle_bits(-14), -15)
+        self.assertEqual(toggle_middle_bits(-15), -15)

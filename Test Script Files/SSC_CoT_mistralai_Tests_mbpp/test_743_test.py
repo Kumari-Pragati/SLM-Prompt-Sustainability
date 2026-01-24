@@ -1,0 +1,33 @@
+import unittest
+from mbpp_743_code import rotate_right
+
+class TestRotateRight(unittest.TestCase):
+    def test_normal_case(self):
+        self.assertEqual(rotate_right([1, 2, 3, 4, 5], 2, 3), [3, 4, 5, 1, 2])
+        self.assertEqual(rotate_right([1, 2, 3, 4, 5], 0, 2), [3, 4, 5])
+        self.assertEqual(rotate_right([1, 2, 3, 4, 5], 1, 1), [2, 3, 4, 5, 1])
+
+    def test_edge_cases(self):
+        self.assertEqual(rotate_right([1], 0, 0), [1])
+        self.assertEqual(rotate_right([1], 1, 0), [1])
+        self.assertEqual(rotate_right([1], 0, 1), [1])
+        self.assertEqual(rotate_right([1], 1, 1), [1])
+
+        self.assertEqual(rotate_right([1, 2], 2, 0), [2, 1])
+        self.assertEqual(rotate_right([1, 2], 0, 2), [2])
+        self.assertEqual(rotate_right([1, 2], 1, 1), [2])
+
+    def test_negative_m_n(self):
+        self.assertEqual(rotate_right([1, 2, 3], -2, 3), [3, 1, 2])
+        self.assertEqual(rotate_right([1, 2, 3], 2, -3), [3, 1, 2])
+        self.assertEqual(rotate_right([1, 2, 3], -2, -3), [3])
+
+    def test_invalid_inputs(self):
+        with self.assertRaises(ValueError):
+            rotate_right([], 0, 0)
+        with self.assertRaises(ValueError):
+            rotate_right([], -1, 0)
+        with self.assertRaises(ValueError):
+            rotate_right([], 0, -1)
+        with self.assertRaises(ValueError):
+            rotate_right([], 1, 0)

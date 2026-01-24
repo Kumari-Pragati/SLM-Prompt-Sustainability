@@ -1,0 +1,24 @@
+import unittest
+from mbpp_387_code import even_or_odd
+
+class TestEvenOrOdd(unittest.TestCase):
+
+    def test_typical_cases(self):
+        self.assertEqual(even_or_odd('1'), 'Odd')
+        self.assertEqual(even_or_odd('2'), 'Even')
+        self.assertEqual(even_or_odd('3'), 'Odd')
+        self.assertEqual(even_or_odd('4'), 'Even')
+        self.assertEqual(even_or_odd('5'), 'Odd')
+        self.assertEqual(even_or_odd('6'), 'Even')
+        self.assertEqual(even_or_odd('7'), 'Odd')
+        self.assertEqual(even_or_odd('8'), 'Even')
+        self.assertEqual(even_or_odd('9'), 'Odd')
+        self.assertEqual(even_or_odd('0'), 'Even')
+
+    def test_edge_cases(self):
+        self.assertEqual(even_or_odd('A'), 'Even')
+        self.assertEqual(even_or_odd('C'), 'Odd')
+        self.assertEqual(even_or_odd('E'), 'Even')
+
+    def test_boundary_cases(self):
+        self.assertEqual(even_or_odd('9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999

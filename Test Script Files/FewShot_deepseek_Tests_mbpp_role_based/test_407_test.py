@@ -1,0 +1,25 @@
+import unittest
+from mbpp_407_code import rearrange_bigger
+
+class TestRearrangeBigger(unittest.TestCase):
+    def test_typical_case(self):
+        self.assertEqual(rearrange_bigger(12345), 52341)
+
+    def test_edge_case(self):
+        self.assertEqual(rearrange_bigger(987654321), 987654321)
+
+    def test_boundary_case(self):
+        self.assertEqual(rearrange_bigger(11111), 11111)
+
+    def test_invalid_input(self):
+        with self.assertRaises(TypeError):
+            rearrange_bigger('12345')
+
+    def test_negative_number(self):
+        self.assertEqual(rearrange_bigger(-12345), -12345)
+
+    def test_single_digit(self):
+        self.assertEqual(rearrange_bigger(5), False)
+
+    def test_zero(self):
+        self.assertEqual(rearrange_bigger(0), 0)

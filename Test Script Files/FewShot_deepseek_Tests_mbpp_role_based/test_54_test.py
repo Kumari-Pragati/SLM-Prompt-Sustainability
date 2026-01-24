@@ -1,0 +1,23 @@
+import unittest
+from mbpp_54_code import counting_sort
+
+class TestCountingSort(unittest.TestCase):
+    def test_typical_use_case(self):
+        self.assertEqual(counting_sort([4, 2, 2, 8, 3, 3, 1]), [1, 2, 2, 3, 3, 4, 8])
+
+    def test_edge_case_with_single_element(self):
+        self.assertEqual(counting_sort([5]), [5])
+
+    def test_boundary_case_with_max_value(self):
+        self.assertEqual(counting_sort([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]), list(range(10)))
+
+    def test_boundary_case_with_negative_numbers(self):
+        self.assertEqual(counting_sort([-1, -2, -3, -4, -5]), [-5, -4, -3, -2, -1])
+
+    def test_error_handling_with_non_integer_values(self):
+        with self.assertRaises(TypeError):
+            counting_sort([1, 2, '3', 4])
+
+    def test_error_handling_with_non_list_input(self):
+        with self.assertRaises(TypeError):
+            counting_sort(123)

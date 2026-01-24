@@ -1,0 +1,52 @@
+import unittest
+from mbpp_853_code import sum_of_odd_Factors
+
+class TestSumOfOddFactors(unittest.TestCase):
+
+    def test_typical_cases(self):
+        self.assertEqual(sum_of_odd_Factors(3), 4)
+        self.assertEqual(sum_of_odd_Factors(5), 6)
+        self.assertEqual(sum_of_odd_Factors(15), 41)
+        self.assertEqual(sum_of_odd_Factors(21), 102)
+        self.assertEqual(sum_of_odd_Factors(25), 60)
+        self.assertEqual(sum_of_odd_Factors(49), 245)
+
+    def test_edge_and_boundary_cases(self):
+        self.assertEqual(sum_of_odd_Factors(2), 2)
+        self.assertEqual(sum_of_odd_Factors(4), 4)
+        self.assertEqual(sum_of_odd_Factors(6), 6)
+        self.assertEqual(sum_of_odd_Factors(7), 14)
+        self.assertEqual(sum_of_odd_Factors(8), 8)
+        self.assertEqual(sum_of_odd_Factors(9), 18)
+        self.assertEqual(sum_of_odd_Factors(10), 10)
+        self.assertEqual(sum_of_odd_Factors(11), 22)
+        self.assertEqual(sum_of_odd_Factors(12), 12)
+        self.assertEqual(sum_of_odd_Factors(13), 26)
+        self.assertEqual(sum_of_odd_Factors(14), 14)
+        self.assertEqual(sum_of_odd_Factors(17), 34)
+        self.assertEqual(sum_of_odd_Factors(18), 18)
+        self.assertEqual(sum_of_odd_Factors(19), 38)
+        self.assertEqual(sum_of_odd_Factors(20), 20)
+        self.assertEqual(sum_of_odd_Factors(23), 46)
+        self.assertEqual(sum_of_odd_Factors(24), 24)
+        self.assertEqual(sum_of_odd_Factors(29), 58)
+        self.assertEqual(sum_of_odd_Factors(30), 30)
+        self.assertEqual(sum_of_odd_Factors(31), 62)
+        self.assertEqual(sum_of_odd_Factors(32), 32)
+        self.assertEqual(sum_of_odd_Factors(33), 66)
+        self.assertEqual(sum_of_odd_Factors(34), 34)
+        self.assertEqual(sum_of_odd_Factors(35), 70)
+        self.assertEqual(sum_of_odd_Factors(36), 36)
+        self.assertEqual(sum_of_odd_Factors(37), 74)
+        self.assertEqual(sum_of_odd_Factors(38), 38)
+        self.assertEqual(sum_of_odd_Factors(39), 78)
+        self.assertEqual(sum_of_odd_Factors(40), 40)
+        self.assertEqual(sum_of_odd_Factors(41), 82)
+        self.assertEqual(sum_of_odd_Factors(42), 42)
+        self.assertEqual(sum_of_odd_Factors(43), 86)
+        self.assertEqual(sum_of_odd_Factors(44), 44)
+        self.assertEqual(sum_of_odd_Factors(45), 90)
+        self.assertEqual(sum_of_odd_Factors(46), 46)
+        self.assertEqual(sum_of_odd_Factors(47), 94)
+        self.assertEqual(sum_of_odd_Factors(48), 48)
+        self.assertEqual(sum_of_odd_Factors(49), 98

@@ -1,0 +1,47 @@
+import unittest
+from mbpp_707_code import count_Set_Bits
+
+class TestCountSetBits(unittest.TestCase):
+
+    def test_typical_cases(self):
+        self.assertEqual(count_Set_Bits(0), 0)
+        self.assertEqual(count_Set_Bits(1), 1)
+        self.assertEqual(count_Set_Bits(3), 2)
+        self.assertEqual(count_Set_Bits(5), 3)
+        self.assertEqual(count_Set_Bits(10), 4)
+        self.assertEqual(count_Set_Bits(13), 5)
+        self.assertEqual(count_Set_Bits(255), 8)
+        self.assertEqual(count_Set_Bits(256), 9)
+        self.assertEqual(count_Set_Bits(511), 10)
+        self.assertEqual(count_Set_Bits(1023), 11)
+        self.assertEqual(count_Set_Bits(1024), 12)
+        self.assertEqual(count_Set_Bits(1025), 13)
+        self.assertEqual(count_Set_Bits(2047), 14)
+        self.assertEqual(count_Set_Bits(2048), 15)
+        self.assertEqual(count_Set_Bits(2049), 16)
+        self.assertEqual(count_Set_Bits(4095), 17)
+        self.assertEqual(count_Set_Bits(4096), 18)
+        self.assertEqual(count_Set_Bits(4097), 19)
+        self.assertEqual(count_Set_Bits(8191), 20)
+        self.assertEqual(count_Set_Bits(8192), 21)
+        self.assertEqual(count_Set_Bits(8193), 22)
+        self.assertEqual(count_Set_Bits(16383), 23)
+        self.assertEqual(count_Set_Bits(16384), 24)
+        self.assertEqual(count_Set_Bits(16385), 25)
+        self.assertEqual(count_Set_Bits(32767), 26)
+        self.assertEqual(count_Set_Bits(32768), 27)
+        self.assertEqual(count_Set_Bits(32769), 28)
+        self.assertEqual(count_Set_Bits(65535), 29)
+        self.assertEqual(count_Set_Bits(65536), 30)
+        self.assertEqual(count_Set_Bits(65537), 31)
+
+    def test_edge_and_boundary_cases(self):
+        self.assertEqual(count_Set_Bits(-1), -1)
+        self.assertEqual(count_Set_Bits(0b1000_0000), 1)
+        self.assertEqual(count_Set_Bits(0b1111_1111), 16)
+        self.assertEqual(count_Set_Bits(0b1000000000), 21)
+        self.assertEqual(count_Set_Bits(0b1111111111111111), 32)
+        self.assertEqual(count_Set_Bits(0b1000000000000000), 37)
+        self.assertEqual(count_Set_Bits(0b11111111111111111111), 48)
+        self.assertEqual(count_Set_Bits(0b1000000000000000000000), 53)
+        self.assertEqual(count_Set_Bits(0b111111111111111111111111), 64)

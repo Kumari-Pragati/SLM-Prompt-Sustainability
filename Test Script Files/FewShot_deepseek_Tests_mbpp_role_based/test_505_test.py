@@ -1,0 +1,24 @@
+import unittest
+from mbpp_505_code import re_order
+
+class TestReOrder(unittest.TestCase):
+    def test_typical_use_case(self):
+        self.assertEqual(re_order([1, 0, 2, 0, 3, 0, 4, 0, 5]), [1, 2, 3, 4, 5, 0, 0, 0, 0])
+
+    def test_all_zeros(self):
+        self.assertEqual(re_order([0, 0, 0, 0, 0]), [0, 0, 0, 0, 0])
+
+    def test_all_ones(self):
+        self.assertEqual(re_order([1, 1, 1, 1, 1]), [1, 1, 1, 1, 1])
+
+    def test_mixed_numbers(self):
+        self.assertEqual(re_order([1, 0, 1, 0, 1]), [1, 1, 1, 0, 0])
+
+    def test_empty_list(self):
+        self.assertEqual(re_order([]), [])
+
+    def test_large_list(self):
+        self.assertEqual(re_order([0]*10000 + [1]*10000), [1]*10000 + [0]*10000)
+
+    def test_negative_numbers(self):
+        self.assertEqual(re_order([-1, 0, -2, 0, -3, 0]), [-1, -2, -3, 0, 0])

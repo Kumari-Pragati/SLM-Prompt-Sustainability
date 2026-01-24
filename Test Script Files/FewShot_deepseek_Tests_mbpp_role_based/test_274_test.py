@@ -1,0 +1,16 @@
+import unittest
+from mbpp_274_code import even_binomial_Coeff_Sum
+
+class TestEvenBinomialCoeffSum(unittest.TestCase):
+    def test_typical_case(self):
+        self.assertEqual(even_binomial_Coeff_Sum(5), 16)
+
+    def test_boundary_conditions(self):
+        self.assertEqual(even_binomial_Coeff_Sum(1), 1)
+        self.assertEqual(even_binomial_Coeff_Sum(2), 4)
+
+    def test_invalid_inputs(self):
+        with self.assertRaises(TypeError):
+            even_binomial_Coeff_Sum('a')
+        with self.assertRaises(ValueError):
+            even_binomial_Coeff_Sum(-1)

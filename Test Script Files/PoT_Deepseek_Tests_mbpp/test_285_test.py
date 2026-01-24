@@ -1,0 +1,21 @@
+import unittest
+from mbpp_285_code import text_match_two_three
+
+class TestTextMatchTwoThree(unittest.TestCase):
+
+    def test_typical_cases(self):
+        self.assertEqual(text_match_two_three('ab'), 'Found a match!')
+        self.assertEqual(text_match_two_three('abb'), 'Found a match!')
+        self.assertEqual(text_match_two_three('abbb'), 'Found a match!')
+
+    def test_edge_cases(self):
+        self.assertEqual(text_match_two_three('a'), 'Not matched!')
+        self.assertEqual(text_match_two_three(''), 'Not matched!')
+
+    def test_boundary_conditions(self):
+        self.assertEqual(text_match_two_three('abab'), 'Not matched!')
+        self.assertEqual(text_match_two_three('ababab'), 'Found a match!')
+
+    def test_corner_cases(self):
+        self.assertEqual(text_match_two_three('abababab'), 'Found a match!')
+        self.assertEqual(text_match_two_three('ababababab'), 'Found a match!')

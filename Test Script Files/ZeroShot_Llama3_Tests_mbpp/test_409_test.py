@@ -1,0 +1,41 @@
+import unittest
+from mbpp_409_code import min_product_tuple
+
+class TestMinProductTuple(unittest.TestCase):
+
+    def test_min_product_tuple(self):
+        self.assertEqual(min_product_tuple([(1, 2), (3, 4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (3, 4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, -2), (3, 4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, -2), (3, 4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (-3, 4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (-3, 4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (3, -4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (3, -4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (-3, -4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (-3, -4), (5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (3, 4), (-5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (3, 4), (-5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (-3, 4), (-5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (-3, 4), (-5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (3, -4), (-5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (3, -4), (-5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (-3, -4), (-5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (-3, -4), (-5, 6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (3, 4), (5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (3, 4), (5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (-3, 4), (5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (-3, 4), (5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (3, -4), (5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (3, -4), (5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (-3, -4), (5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (-3, -4), (5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (3, 4), (-5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (3, 4), (-5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (-3, 4), (-5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (-3, 4), (-5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (3, -4), (-5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (3, -4), (-5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (-3, -4), (-5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(-1, 2), (-3, -4), (-5, -6)]), 2)
+        self.assertEqual(min_product_tuple([(1, 2), (3, 4), (5, 6), (

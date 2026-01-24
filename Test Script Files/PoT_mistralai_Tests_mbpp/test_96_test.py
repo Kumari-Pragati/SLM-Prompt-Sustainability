@@ -1,0 +1,40 @@
+import unittest
+from mbpp_96_code import divisor
+
+class TestDivisor(unittest.TestCase):
+    def test_typical_cases(self):
+        self.assertEqual(divisor(1), 1)
+        self.assertEqual(divisor(2), 1)
+        self.assertEqual(divisor(3), 2)
+        self.assertEqual(divisor(4), 2)
+        self.assertEqual(divisor(5), 2)
+        self.assertEqual(divisor(6), 2)
+        self.assertEqual(divisor(7), 1)
+        self.assertEqual(divisor(8), 2)
+        self.assertEqual(divisor(9), 3)
+        self.assertEqual(divisor(10), 4)
+
+    def test_edge_and_boundary_cases(self):
+        self.assertEqual(divisor(0), 0)
+        self.assertEqual(divisor(100), 25)
+        self.assertEqual(divisor(12), 6)
+        self.assertEqual(divisor(15), 4)
+        self.assertEqual(divisor(20), 4)
+        self.assertEqual(divisor(21), 3)
+        self.assertEqual(divisor(24), 8)
+        self.assertEqual(divisor(25), 8)
+        self.assertEqual(divisor(30), 6)
+        self.assertEqual(divisor(31), 3)
+        self.assertEqual(divisor(40), 8)
+        self.assertEqual(divisor(41), 7)
+        self.assertEqual(divisor(50), 12)
+        self.assertEqual(divisor(51), 10)
+        self.assertEqual(divisor(60), 12)
+        self.assertEqual(divisor(61), 10)
+        self.assertEqual(divisor(70), 14)
+        self.assertEqual(divisor(71), 12)
+        self.assertEqual(divisor(80), 16)
+        self.assertEqual(divisor(81), 9)
+        self.assertEqual(divisor(90), 18)
+        self.assertEqual(divisor(91), 16)
+        self.assertEqual(divisor(100), 25)

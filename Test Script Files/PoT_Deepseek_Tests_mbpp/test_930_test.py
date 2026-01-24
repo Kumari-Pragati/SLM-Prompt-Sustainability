@@ -1,0 +1,18 @@
+import unittest
+from mbpp_930_code import text_match
+
+class TestTextMatch(unittest.TestCase):
+
+    def test_typical_cases(self):
+        self.assertEqual(text_match('ab'), 'Found a match!')
+        self.assertEqual(text_match('aab'), 'Found a match!')
+        self.assertEqual(text_match('abb'), 'Found a match!')
+        self.assertEqual(text_match('abbb'), 'Found a match!')
+
+    def test_edge_cases(self):
+        self.assertEqual(text_match('a'), 'Not matched!')
+        self.assertEqual(text_match('b'), 'Not matched!')
+        self.assertEqual(text_match(''), 'Not matched!')
+
+    def test_boundary_conditions(self):
+        self.assertEqual(text_match('abababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababab

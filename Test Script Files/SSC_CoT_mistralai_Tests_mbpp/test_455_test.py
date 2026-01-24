@@ -1,0 +1,22 @@
+import unittest
+from mbpp_455_code import check_monthnumb_number
+
+class TestCheckMonthnumbNumber(unittest.TestCase):
+    def test_normal_inputs(self):
+        self.assertTrue(check_monthnumb_number(1))
+        self.assertTrue(check_monthnumb_number(3))
+        self.assertTrue(check_monthnumb_number(5))
+        self.assertTrue(check_monthnumb_number(7))
+        self.assertTrue(check_monthnumb_number(8))
+        self.assertTrue(check_monthnumb_number(10))
+        self.assertTrue(check_monthnumb_number(12))
+
+    def test_edge_and_boundary_conditions(self):
+        self.assertFalse(check_monthnumb_number(0))
+        self.assertFalse(check_monthnumb_number(13))
+        self.assertFalse(check_monthnumb_number(-1))
+        self.assertFalse(check_monthnumb_number(14))
+        self.assertFalse(check_monthnumb_number(21))
+        self.assertFalse(check_monthnumb_number(31))
+        self.assertFalse(check_monthnumb_number(13.5))
+        self.assertFalse(check_monthnumb_number('April'))

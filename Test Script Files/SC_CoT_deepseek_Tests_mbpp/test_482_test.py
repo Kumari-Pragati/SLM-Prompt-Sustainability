@@ -1,0 +1,24 @@
+import unittest
+from mbpp_482_code import match
+
+class TestMatchFunction(unittest.TestCase):
+
+    def test_typical_case(self):
+        self.assertEqual(match('HelloWorld'), 'Yes')
+
+    def test_edge_case(self):
+        self.assertEqual(match(''), 'No')
+
+    def test_boundary_case(self):
+        self.assertEqual(match('a'), 'No')
+        self.assertEqual(match('A'), 'No')
+
+    def test_corner_case(self):
+        self.assertEqual(match('123'), 'No')
+        self.assertEqual(match('!@#'), 'No')
+        self.assertEqual(match('aA'), 'No')
+        self.assertEqual(match('Aa'), 'No')
+
+    def test_invalid_input(self):
+        with self.assertRaises(TypeError):
+            match(123)

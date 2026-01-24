@@ -1,0 +1,41 @@
+import unittest
+from mbpp_806_code import max_run_uppercase
+
+class TestMaxRunUppercase(unittest.TestCase):
+
+    def test_max_run_uppercase(self):
+        self.assertEqual(max_run_uppercase("ABC"), 3)
+        self.assertEqual(max_run_uppercase("aBc"), 1)
+        self.assertEqual(max_run_uppercase("ABCabc"), 3)
+        self.assertEqual(max_run_uppercase("ABCABC"), 3)
+        self.assertEqual(max_run_uppercase("aBcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcD"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabcDabc"), 2)
+        self.assertEqual(max_run_uppercase("aBcDabcDabcDabcD

@@ -1,0 +1,20 @@
+import unittest
+from mbpp_497_code import surfacearea_cone
+
+class TestSurfaceAreaCone(unittest.TestCase):
+    def test_positive_radius_and_height(self):
+        self.assertAlmostEqual(surfacearea_cone(5, 10), 3.14159265359 * 5 * (5 + math.sqrt(5**2 + 10**2)))
+
+    def test_zero_radius(self):
+        self.assertEqual(surfacearea_cone(0, 10), 0)
+
+    def test_zero_height(self):
+        self.assertEqual(surfacearea_cone(5, 0), 0)
+
+    def test_negative_radius(self):
+        with self.assertRaises(TypeError):
+            surfacearea_cone(-5, 10)
+
+    def test_negative_height(self):
+        with self.assertRaises(TypeError):
+            surfacearea_cone(5, -10)

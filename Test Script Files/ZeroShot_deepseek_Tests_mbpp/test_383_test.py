@@ -1,0 +1,38 @@
+import unittest
+from mbpp_383_code import even_bit_toggle_number
+
+class TestEvenBitToggleNumber(unittest.TestCase):
+
+    def test_even_bit_toggle_number(self):
+        self.assertEqual(even_bit_toggle_number(0), 0)
+        self.assertEqual(even_bit_toggle_number(1), 2)
+        self.assertEqual(even_bit_toggle_number(2), 1)
+        self.assertEqual(even_bit_toggle_number(3), 3)
+        self.assertEqual(even_bit_toggle_number(4), 5)
+        self.assertEqual(even_bit_toggle_number(5), 7)
+        self.assertEqual(even_bit_toggle_number(6), 3)
+        self.assertEqual(even_bit_toggle_number(7), 7)
+        self.assertEqual(even_bit_toggle_number(8), 9)
+        self.assertEqual(even_bit_toggle_number(9), 11)
+        self.assertEqual(even_bit_toggle_number(10), 5)
+        self.assertEqual(even_bit_toggle_number(11), 13)
+        self.assertEqual(even_bit_toggle_number(12), 13)
+        self.assertEqual(even_bit_toggle_number(13), 15)
+        self.assertEqual(even_bit_toggle_number(14), 7)
+        self.assertEqual(even_bit_toggle_number(15), 15)
+        self.assertEqual(even_bit_toggle_number(16), 17)
+        self.assertEqual(even_bit_toggle_number(17), 19)
+        self.assertEqual(even_bit_toggle_number(18), 11)
+        self.assertEqual(even_bit_toggle_number(19), 21)
+        self.assertEqual(even_bit_toggle_number(20), 11)
+        self.assertEqual(even_bit_toggle_number(21), 23)
+        self.assertEqual(even_bit_toggle_number(22), 15)
+        self.assertEqual(even_bit_toggle_number(23), 25)
+        self.assertEqual(even_bit_toggle_number(24), 25)
+        self.assertEqual(even_bit_toggle_number(25), 27)
+        self.assertEqual(even_bit_toggle_number(26), 15)
+        self.assertEqual(even_bit_toggle_number(27), 27)
+        self.assertEqual(even_bit_toggle_number(28), 29)
+        self.assertEqual(even_bit_toggle_number(29), 31)
+        self.assertEqual(even_bit_toggle_number(30), 19)
+        self.assertEqual(even_bit_toggle_number(31), 31)

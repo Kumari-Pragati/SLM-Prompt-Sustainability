@@ -1,0 +1,35 @@
+import unittest
+from mbpp_315_code import find_Max_Len_Even
+
+class TestFindMaxLenEven(unittest.TestCase):
+
+    def test_find_Max_Len_Even(self):
+        self.assertEqual(find_Max_Len_Even("Hello World"), "World")
+        self.assertEqual(find_Max_Len_Even("This is a test string"), "string")
+        self.assertEqual(find_Max_Len_Even(""), "-1")
+        self.assertEqual(find_Max_Len_Even("a"), "-1")
+        self.assertEqual(find_Max_Len_Even("ab"), "ab")
+        self.assertEqual(find_Max_Len_Even("abc"), "-1")
+        self.assertEqual(find_Max_Len_Even("abcd"), "abcd")
+        self.assertEqual(find_Max_Len_Even("abcde"), "abcde")
+        self.assertEqual(find_Max_Len_Even("abcdef"), "abcdef")
+        self.assertEqual(find_Max_Len_Even("abcdefg"), "abcdefg")
+        self.assertEqual(find_Max_Len_Even("abcdefgh"), "abcdefgh")
+        self.assertEqual(find_Max_Len_Even("abcdefghi"), "abcdefghi")
+        self.assertEqual(find_Max_Len_Even("abcdefghij"), "abcdefghij")
+        self.assertEqual(find_Max_Len_Even("abcdefghijk"), "abcdefghijk")
+        self.assertEqual(find_Max_Len_Even("abcdefghijkl"), "abcdefghijkl")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklm"), "abcdefghijklm")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmn"), "abcdefghijklmn")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmno"), "abcdefghijklmno")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnop"), "abcdefghijklmnop")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopq"), "abcdefghijklmnopq")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqr"), "abcdefghijklmnopqr")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqrs"), "abcdefghijklmnopqrs")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqrst"), "abcdefghijklmnopqrst")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqrstu"), "abcdefghijklmnopqrstu")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqrstuv"), "abcdefghijklmnopqrstuv")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqrstuvw"), "abcdefghijklmnopqrstuvw")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqrstuvwx"), "abcdefghijklmnopqrstuvwx")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqrstuvwxy"), "abcdefghijklmnopqrstuvwxy")
+        self.assertEqual(find_Max_Len_Even("abcdefghijklmnopqrstuvwxyz"), "abcdefghijklmnopqrstuvwxyz")

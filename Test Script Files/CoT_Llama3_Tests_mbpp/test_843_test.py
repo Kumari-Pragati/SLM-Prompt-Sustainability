@@ -1,0 +1,42 @@
+import unittest
+from mbpp_843_code import nth_super_ugly_number
+
+class TestNthSuperUglyNumber(unittest.TestCase):
+
+    def test_nth_super_ugly_number(self):
+        self.assertEqual(nth_super_ugly_number(1, [2]), 1)
+        self.assertEqual(nth_super_ugly_number(2, [2, 7, 13, 21]), 2)
+        self.assertEqual(nth_super_ugly_number(3, [2, 7, 13, 21]), 4)
+        self.assertEqual(nth_super_ugly_number(4, [2, 7, 13, 21]), 6)
+        self.assertEqual(nth_super_ugly_number(5, [2, 7, 13, 21]), 8)
+        self.assertEqual(nth_super_ugly_number(6, [2, 7, 13, 21]), 10)
+        self.assertEqual(nth_super_ugly_number(7, [2, 7, 13, 21]), 12)
+        self.assertEqual(nth_super_ugly_number(8, [2, 7, 13, 21]), 14)
+        self.assertEqual(nth_super_ugly_number(9, [2, 7, 13, 21]), 18)
+        self.assertEqual(nth_super_ugly_number(10, [2, 7, 13, 21]), 20)
+        self.assertEqual(nth_super_ugly_number(11, [2, 7, 13, 21]), 24)
+        self.assertEqual(nth_super_ugly_number(12, [2, 7, 13, 21]), 28)
+        self.assertEqual(nth_super_ugly_number(13, [2, 7, 13, 21]), 30)
+        self.assertEqual(nth_super_ugly_number(14, [2, 7, 13, 21]), 32)
+        self.assertEqual(nth_super_ugly_number(15, [2, 7, 13, 21]), 35)
+        self.assertEqual(nth_super_ugly_number(16, [2, 7, 13, 21]), 40)
+        self.assertEqual(nth_super_ugly_number(17, [2, 7, 13, 21]), 42)
+        self.assertEqual(nth_super_ugly_number(18, [2, 7, 13, 21]), 48)
+        self.assertEqual(nth_super_ugly_number(19, [2, 7, 13, 21]), 52)
+        self.assertEqual(nth_super_ugly_number(20, [2, 7, 13, 21]), 56)
+        self.assertEqual(nth_super_ugly_number(21, [2, 7, 13, 21]), 60)
+        self.assertEqual(nth_super_ugly_number(22, [2, 7, 13, 21]), 64)
+        self.assertEqual(nth_super_ugly_number(23, [2, 7, 13, 21]), 68)
+        self.assertEqual(nth_super_ugly_number(24, [2, 7, 13, 21]), 72)
+        self.assertEqual(nth_super_ugly_number(25, [2, 7, 13, 21]), 77)
+        self.assertEqual(nth_super_ugly_number(26, [2, 7, 13, 21]), 84)
+        self.assertEqual(nth_super_ugly_number(27, [2, 7, 13, 21]), 88)
+        self.assertEqual(nth_super_ugly_number(28, [2, 7, 13, 21]), 91)
+        self.assertEqual(nth_super_ugly_number(29, [2, 7, 13, 21]), 96)
+        self.assertEqual(nth_super_ugly_number(30, [2, 7, 13, 21]), 100)
+        self.assertEqual(nth_super_ugly_number(31, [2, 7, 13, 21]), 105)
+        self.assertEqual(nth_super_ugly_number(32, [2, 7, 13, 21]), 112)
+        self.assertEqual(nth_super_ugly_number(33, [2, 7, 13, 21]), 116)
+        self.assertEqual(nth_super_ugly_number(34, [2, 7, 13, 21]), 120)
+        self.assertEqual(nth_super_ugly_number(35, [2, 7, 13, 21]), 126)
+        self.assertEqual(nth_super_ugly_number(36,

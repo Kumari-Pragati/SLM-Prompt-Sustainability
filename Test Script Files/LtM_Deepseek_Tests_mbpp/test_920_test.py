@@ -1,0 +1,34 @@
+import unittest
+from mbpp_920_code import remove_tuple
+
+class TestRemoveTuple(unittest.TestCase):
+
+    def test_simple_valid_input(self):
+        test_list = [(1, 2), (3, 4), (None, None)]
+        expected_output = '[(1, 2), (3, 4)]'
+        self.assertEqual(remove_tuple(test_list), expected_output)
+
+    def test_empty_input(self):
+        test_list = []
+        expected_output = '[]'
+        self.assertEqual(remove_tuple(test_list), expected_output)
+
+    def test_all_none_input(self):
+        test_list = [(None, None), (None, None), (None, None)]
+        expected_output = '[]'
+        self.assertEqual(remove_tuple(test_list), expected_output)
+
+    def test_mixed_valid_and_none_input(self):
+        test_list = [(1, 2), (None, None), (3, 4), (None, None)]
+        expected_output = '[(1, 2), (3, 4)]'
+        self.assertEqual(remove_tuple(test_list), expected_output)
+
+    def test_single_tuple_with_none(self):
+        test_list = [(None, None)]
+        expected_output = '[]'
+        self.assertEqual(remove_tuple(test_list), expected_output)
+
+    def test_single_tuple_with_valid_elements(self):
+        test_list = [(1, 2)]
+        expected_output = '[(1, 2)]'
+        self.assertEqual(remove_tuple(test_list), expected_output)

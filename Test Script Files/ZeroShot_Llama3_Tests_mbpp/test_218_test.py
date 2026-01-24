@@ -1,0 +1,48 @@
+import unittest
+from mbpp_218_code import min_Operations
+
+class TestMinOperations(unittest.TestCase):
+
+    def test_min_Operations(self):
+        self.assertEqual(min_Operations(2, 4), 1)
+        self.assertEqual(min_Operations(3, 6), 2)
+        self.assertEqual(min_Operations(4, 12), 3)
+        self.assertEqual(min_Operations(5, 15), 3)
+        self.assertEqual(min_Operations(6, 12), 2)
+        self.assertEqual(min_Operations(7, 21), 4)
+        self.assertEqual(min_Operations(8, 24), 4)
+        self.assertEqual(min_Operations(9, 27), 4)
+        self.assertEqual(min_Operations(10, 30), 4)
+        self.assertEqual(min_Operations(11, 33), 4)
+        self.assertEqual(min_Operations(12, 36), 4)
+        self.assertEqual(min_Operations(13, 39), 4)
+        self.assertEqual(min_Operations(14, 42), 4)
+        self.assertEqual(min_Operations(15, 45), 4)
+        self.assertEqual(min_Operations(16, 48), 4)
+        self.assertEqual(min_Operations(17, 51), 4)
+        self.assertEqual(min_Operations(18, 54), 4)
+        self.assertEqual(min_Operations(19, 57), 4)
+        self.assertEqual(min_Operations(20, 60), 4)
+
+    def test_min_Operations_edge_cases(self):
+        self.assertEqual(min_Operations(0, 0), 0)
+        self.assertEqual(min_Operations(0, 1), 0)
+        self.assertEqual(min_Operations(0, 2), 1)
+        self.assertEqual(min_Operations(0, 3), 1)
+        self.assertEqual(min_Operations(0, 4), 1)
+        self.assertEqual(min_Operations(0, 5), 1)
+        self.assertEqual(min_Operations(0, 6), 1)
+        self.assertEqual(min_Operations(0, 7), 1)
+        self.assertEqual(min_Operations(0, 8), 1)
+        self.assertEqual(min_Operations(0, 9), 1)
+        self.assertEqual(min_Operations(0, 10), 1)
+        self.assertEqual(min_Operations(0, 11), 1)
+        self.assertEqual(min_Operations(0, 12), 1)
+        self.assertEqual(min_Operations(0, 13), 1)
+        self.assertEqual(min_Operations(0, 14), 1)
+        self.assertEqual(min_Operations(0, 15), 1)
+        self.assertEqual(min_Operations(0, 16), 1)
+        self.assertEqual(min_Operations(0, 17), 1)
+        self.assertEqual(min_Operations(0, 18), 1)
+        self.assertEqual(min_Operations(0, 19), 1)
+        self.assertEqual(min_Operations(0, 20), 1)

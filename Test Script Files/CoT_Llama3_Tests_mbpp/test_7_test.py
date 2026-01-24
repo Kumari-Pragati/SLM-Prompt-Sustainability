@@ -1,0 +1,33 @@
+import unittest
+from mbpp_7_code import find_char_long
+
+class TestFindCharLong(unittest.TestCase):
+    def test_typical_input(self):
+        self.assertEqual(find_char_long("Hello World, this is a test"), ['World', 'test'])
+
+    def test_edge_case_empty_string(self):
+        self.assertEqual(find_char_long(""), [])
+
+    def test_edge_case_single_word(self):
+        self.assertEqual(find_char_long("Hello"), [])
+
+    def test_edge_case_single_word_with_spaces(self):
+        self.assertEqual(find_char_long("Hello World"), [])
+
+    def test_edge_case_multiple_words(self):
+        self.assertEqual(find_char_long("Hello World, this is a test, another test"), ['World', 'test', 'test'])
+
+    def test_edge_case_multiple_words_with_spaces(self):
+        self.assertEqual(find_char_long("Hello World, this is a test, another test with spaces"), ['World', 'test', 'test'])
+
+    def test_edge_case_non_alphanumeric_characters(self):
+        self.assertEqual(find_char_long("Hello! World, this is a test, another test with spaces"), ['World', 'test'])
+
+    def test_edge_case_punctuation(self):
+        self.assertEqual(find_char_long("Hello, World! this is a test, another test with spaces"), ['World', 'test'])
+
+    def test_edge_case_numbers(self):
+        self.assertEqual(find_char_long("Hello, World! this is a test, another test with spaces123"), ['World', 'test'])
+
+    def test_edge_case_special_characters(self):
+        self.assertEqual(find_char_long("Hello, World! this is a test, another test with spaces@#"), ['World', 'test'])

@@ -1,0 +1,36 @@
+import unittest
+from mbpp_392_code import get_max_sum
+
+class TestGetMaxSum(unittest.TestCase):
+    def test_typical_inputs(self):
+        self.assertEqual(get_max_sum(1), 1)
+        self.assertEqual(get_max_sum(2), 2)
+        self.assertEqual(get_max_sum(3), 3)
+        self.assertEqual(get_max_sum(4), 4)
+        self.assertEqual(get_max_sum(5), 5)
+        self.assertEqual(get_max_sum(6), 6)
+        self.assertEqual(get_max_sum(7), 7)
+        self.assertEqual(get_max_sum(8), 8)
+        self.assertEqual(get_max_sum(9), 9)
+        self.assertEqual(get_max_sum(10), 10)
+
+    def test_edge_inputs(self):
+        self.assertEqual(get_max_sum(0), 0)
+        self.assertEqual(get_max_sum(11), 10)
+        self.assertEqual(get_max_sum(12), 12)
+        self.assertEqual(get_max_sum(13), 13)
+        self.assertEqual(get_max_sum(14), 14)
+        self.assertEqual(get_max_sum(15), 15)
+        self.assertEqual(get_max_sum(16), 16)
+        self.assertEqual(get_max_sum(17), 17)
+        self.assertEqual(get_max_sum(18), 18)
+        self.assertEqual(get_max_sum(19), 19)
+        self.assertEqual(get_max_sum(20), 20)
+
+    def test_boundary_inputs(self):
+        self.assertEqual(get_max_sum(123456789), 123456789)
+        self.assertEqual(get_max_sum(987654321), 987654321)
+
+    def test_invalid_inputs(self):
+        self.assertRaises(ValueError, get_max_sum, -1)
+        self.assertRaises(ValueError, get_max_sum, float('inf'))

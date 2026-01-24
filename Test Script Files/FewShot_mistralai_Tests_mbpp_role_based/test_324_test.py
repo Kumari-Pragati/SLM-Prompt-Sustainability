@@ -1,0 +1,18 @@
+import unittest
+from mbpp_324_code import sum_of_alternates
+
+class TestSumOfAlternates(unittest.TestCase):
+    def test_positive_numbers(self):
+        self.assertEqual(sum_of_alternates((1, 2, 3, 4, 5)), ((1, 2, 4))
+
+    def test_negative_numbers(self):
+        self.assertEqual(sum_of_alternates((-1, -2, -3, -4, -5)), ((-1, -3, -4))
+
+    def test_mixed_numbers(self):
+        self.assertEqual(sum_of_alternates((1, -2, 3, -4, 5)), ((1, -1, 3))
+
+    def test_empty_list(self):
+        self.assertEqual(sum_of_alternates([]), (0, 0))
+
+    def test_single_element(self):
+        self.assertEqual(sum_of_alternates([1]), (1, 0))

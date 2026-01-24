@@ -1,0 +1,43 @@
+import unittest
+from mbpp_868_code import length_Of_Last_Word
+
+class TestLengthOfLastWord(unittest.TestCase):
+
+    def test_length_of_last_word(self):
+        self.assertEqual(length_Of_Last_Word("Hello World"), 5)
+        self.assertEqual(length_Of_Last_Word("   "), 0)
+        self.assertEqual(length_Of_Last_Word("a"), 1)
+        self.assertEqual(length_Of_Last_Word("hello"), 5)
+        self.assertEqual(length_Of_Last_Word("a b c"), 1)
+        self.assertEqual(length_Of_Last_Word("   a   b   c   "), 1)
+        self.assertEqual(length_Of_Last_Word(""), 0)
+        self.assertEqual(length_Of_Last_Word("a b c d"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x y"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x y z"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x y z a"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x y z a b"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x y z a b c"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f"), 1)
+        self.assertEqual(length_Of_Last_Word("a b c d e f g h i j k l m n o

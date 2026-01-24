@@ -1,0 +1,40 @@
+import unittest
+from mbpp_676_code import remove_extra_char
+
+class TestRemoveExtraChar(unittest.TestCase):
+
+    def test_remove_extra_char(self):
+        self.assertEqual(remove_extra_char("Hello, World!"), "HelloWorld")
+        self.assertEqual(remove_extra_char("Python is awesome"), "Pythonisawesome")
+        self.assertEqual(remove_extra_char("   Hello   "), "Hello")
+        self.assertEqual(remove_extra_char("Hello World!"), "HelloWorld")
+        self.assertEqual(remove_extra_char("1234567890"), "1234567890")
+        self.assertEqual(remove_extra_char("Hello,World!"), "HelloWorld")
+        self.assertEqual(remove_extra_char("   Hello   World  !"), "HelloWorld")
+        self.assertEqual(remove_extra_char("Python is awesome!"), "Pythonisawesome")
+        self.assertEqual(remove_extra_char("   Python   is   awesome  !"), "Pythonisawesome")
+        self.assertEqual(remove_extra_char("1234567890 ABCDEFGHI"), "1234567890ABCDEFGH")
+        self.assertEqual(remove_extra_char("Hello,World! ABCDEFGHI"), "HelloWorldABCDEFGH")
+        self.assertEqual(remove_extra_char("   Hello   World  ! ABCDEFGHI"), "HelloWorldABCDEFGH")
+        self.assertEqual(remove_extra_char("Python is awesome ABCDEFGHI"), "PythonisawesomeABCDEFGH")
+        self.assertEqual(remove_extra_char("   Python   is   awesome   ABCDEFGHI"), "PythonisawesomeABCDEFGH")
+        self.assertEqual(remove_extra_char("1234567890 ABCDEFGHI JKLMNOP"), "1234567890ABCDEFGHJKLMNOP")
+        self.assertEqual(remove_extra_char("Hello,World! ABCDEFGHI JKLMNOP"), "HelloWorldABCDEFGHJKLMNOP")
+        self.assertEqual(remove_extra_char("   Hello   World  ! ABCDEFGHI JKLMNOP"), "HelloWorldABCDEFGHJKLMNOP")
+        self.assertEqual(remove_extra_char("Python is awesome ABCDEFGHI JKLMNOP"), "PythonisawesomeABCDEFGHJKLMNOP")
+        self.assertEqual(remove_extra_char("   Python   is   awesome   ABCDEFGHI JKLMNOP"), "PythonisawesomeABCDEFGHJKLMNOP")
+        self.assertEqual(remove_extra_char("1234567890 ABCDEFGHI JKLMNOP QRSTUVWX"), "1234567890ABCDEFGHJKLMNOPQRSTUVWX")
+        self.assertEqual(remove_extra_char("Hello,World! ABCDEFGHI JKLMNOP QRSTUVWX"), "HelloWorldABCDEFGHJKLMNOPQRSTUVWX")
+        self.assertEqual(remove_extra_char("   Hello   World  ! ABCDEFGHI JKLMNOP QRSTUVWX"), "HelloWorldABCDEFGHJKLMNOPQRSTUVWX")
+        self.assertEqual(remove_extra_char("Python is awesome ABCDEFGHI JKLMNOP QRSTUVWX"), "PythonisawesomeABCDEFGHJKLMNOPQRSTUVWX")
+        self.assertEqual(remove_extra_char("   Python   is   awesome   ABCDEFGHI JKLMNOP QRSTUVWX"), "PythonisawesomeABCDEFGHJKLMNOPQRSTUVWX")
+        self.assertEqual(remove_extra_char("1234567890 ABCDEFGHI JKLMNOP QRSTUVWX YZ"), "1234567890ABCDEFGHJKLMNOPQRSTUVWXYZ")
+        self.assertEqual(remove_extra_char("Hello,World! ABCDEFGHI JKLMNOP QRSTUVWX YZ"), "HelloWorldABCDEFGHJKLMNOPQRSTUVWXYZ")
+        self.assertEqual(remove_extra_char("   Hello   World  ! ABCDEFGHI JKLMNOP QRSTUVWX YZ"), "HelloWorldABCDEFGHJKLMNOPQRSTUVWXYZ")
+        self.assertEqual(remove_extra_char("Python is awesome ABCDEFGHI JKLMNOP QRSTUVWX YZ"), "PythonisawesomeABCDEFGHJKLMNOPQRSTUVWXYZ")
+        self.assertEqual(remove_extra_char("   Python   is   awesome   ABCDEFGHI JKLMNOP QRSTUVWX YZ"), "PythonisawesomeABCDEFGHJKLMNOPQRSTUVWXYZ")
+        self.assertEqual(remove_extra_char("1234567890 ABCDEFGHI JKLMNOP QRSTUVWX YZ ABCDEFGHI"), "1234567890ABCDEFGHJKLMNOPQRSTUVWXYZABCDEFGH")
+        self.assertEqual(remove_extra_char("Hello,World! ABCDEFGHI JKLMNOP QRSTUVWX YZ ABCDEFGHI"), "HelloWorldABCDEFGHJKLMNOPQRSTUVWXYZABCDEFGH")
+        self.assertEqual(remove_extra_char("   Hello   World  ! ABCDEFGHI JKLMNOP QRSTUVWX YZ ABCDEFGHI"), "HelloWorldABCDEFGHJKLMNOPQRSTUVWXYZABCDEFGH")
+        self.assertEqual(remove_extra_char("Python is awesome ABCDEFGHI JKLMNOP QRSTUVWX YZ ABCDEFGHI"), "PythonisawesomeABCDEFGHJKLMNOPQRSTUVWXYZABCDEFGH")
+        self.assertEqual(remove_extra_char("   Python   is

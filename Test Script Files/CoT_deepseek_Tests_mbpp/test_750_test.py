@@ -1,0 +1,40 @@
+import unittest
+from mbpp_750_code import add_tuple
+
+class TestAddTuple(unittest.TestCase):
+
+    def test_add_tuple_typical_case(self):
+        test_list = [1, 2, 3]
+        test_tup = (4, 5)
+        expected_output = [1, 2, 3, 4, 5]
+        self.assertEqual(add_tuple(test_list, test_tup), expected_output)
+
+    def test_add_tuple_empty_list(self):
+        test_list = []
+        test_tup = (4, 5)
+        expected_output = [4, 5]
+        self.assertEqual(add_tuple(test_list, test_tup), expected_output)
+
+    def test_add_tuple_empty_tuple(self):
+        test_list = [1, 2, 3]
+        test_tup = ()
+        expected_output = [1, 2, 3]
+        self.assertEqual(add_tuple(test_list, test_tup), expected_output)
+
+    def test_add_tuple_empty_both(self):
+        test_list = []
+        test_tup = ()
+        expected_output = []
+        self.assertEqual(add_tuple(test_list, test_tup), expected_output)
+
+    def test_add_tuple_with_strings(self):
+        test_list = ['a', 'b', 'c']
+        test_tup = ('d', 'e')
+        expected_output = ['a', 'b', 'c', 'd', 'e']
+        self.assertEqual(add_tuple(test_list, test_tup), expected_output)
+
+    def test_add_tuple_with_mixed_types(self):
+        test_list = [1, 'a', 3.0]
+        test_tup = (4, 'b')
+        expected_output = [1, 'a', 3.0, 4, 'b']
+        self.assertEqual(add_tuple(test_list, test_tup), expected_output)

@@ -1,0 +1,26 @@
+import unittest
+from mbpp_423_code import get_maxgold
+
+class TestGetMaxGold(unittest.TestCase):
+
+    def test_simple(self):
+        self.assertEqual(get_maxgold([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3, 3), 12)
+        self.assertEqual(get_maxgold([[1], [2], [3]], 3, 1), 3)
+        self.assertEqual(get_maxgold([[1, 2], [3, 4]], 2, 2), 4)
+
+    def test_edge_and_boundary(self):
+        self.assertEqual(get_maxgold([[1]], 1, 1), 1)
+        self.assertEqual(get_maxgold([[1, 2, 3]], 1, 3), 3)
+        self.assertEqual(get_maxgold([[1, 2, 3], [4, 5, 6]], 2, 1), 5)
+        self.assertEqual(get_maxgold([[1, 2, 3], [4, 5, 6]], 0, 3), 0)
+        self.assertEqual(get_maxgold([[1, 2, 3], [4, 5, 6]], 3, 0), 0)
+
+    def test_complex(self):
+        self.assertEqual(get_maxgold([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3, 3), 12)
+        self.assertEqual(get_maxgold([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]], 4, 4), 39)
+        self.assertEqual(get_maxgold([[1], [2], [3]], 3, 1), 3)
+        self.assertEqual(get_maxgold([[1, 2], [3, 4]], 2, 2), 4)
+        self.assertEqual(get_maxgold([[1, 2, 3], [4, 5, 6]], 2, 1), 5)
+        self.assertEqual(get_maxgold([[1, 2, 3], [4, 5, 6]], 0, 3), 0)
+        self.assertEqual(get_maxgold([[1, 2, 3], [4, 5, 6]], 3, 0), 0)
+        self.assertEqual(get_maxgold([[1]], 1, 1), 1)

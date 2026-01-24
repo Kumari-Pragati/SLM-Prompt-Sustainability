@@ -1,0 +1,29 @@
+import unittest
+from mbpp_958_code import int_to_roman
+
+class TestIntToRoman(unittest.TestCase):
+    def test_valid_inputs(self):
+        self.assertEqual(int_to_roman(1), 'I')
+        self.assertEqual(int_to_roman(4), 'IV')
+        self.assertEqual(int_to_roman(5), 'V')
+        self.assertEqual(int_to_roman(6), 'VI')
+        self.assertEqual(int_to_roman(10), 'X')
+        self.assertEqual(int_to_roman(50), 'L')
+        self.assertEqual(int_to_roman(100), 'C')
+        self.assertEqual(int_to_roman(500), 'D')
+        self.assertEqual(int_to_roman(1000), 'M')
+        self.assertEqual(int_to_roman(1999), 'MCMXCIX')
+        self.assertEqual(int_to_roman(3999), 'MMMCMXCIX')
+
+    def test_edge_cases(self):
+        self.assertEqual(int_to_roman(0), '')
+        self.assertEqual(int_to_roman(1), 'I')
+        self.assertEqual(int_to_roman(3999), 'MMMCMXCIX')
+
+    def test_invalid_inputs(self):
+        with self.assertRaises(TypeError):
+            int_to_roman('a')
+        with self.assertRaises(TypeError):
+            int_to_roman(None)
+        with self.assertRaises(TypeError):
+            int_to_roman(4000)

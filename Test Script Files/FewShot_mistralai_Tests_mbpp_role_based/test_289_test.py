@@ -1,0 +1,51 @@
+import unittest
+from mbpp_289_code import odd_Days
+
+class TestOddDays(unittest.TestCase):
+    def test_positive_numbers(self):
+        self.assertEqual(odd_Days(2000), 6)
+        self.assertEqual(odd_Days(2001), 1)
+        self.assertEqual(odd_Days(2002), 6)
+        self.assertEqual(odd_Days(2003), 0)
+        self.assertEqual(odd_Days(2004), 6)
+        self.assertEqual(odd_Days(2005), 1)
+        self.assertEqual(odd_Days(2006), 6)
+        self.assertEqual(odd_Days(2007), 0)
+        self.assertEqual(odd_Days(2008), 6)
+        self.assertEqual(odd_Days(2009), 1)
+        self.assertEqual(odd_Days(2100), 6)
+        self.assertEqual(odd_Days(2101), 1)
+        self.assertEqual(odd_Days(2102), 6)
+        self.assertEqual(odd_Days(2103), 0)
+        self.assertEqual(odd_Days(2104), 6)
+        self.assertEqual(odd_Days(2105), 1)
+        self.assertEqual(odd_Days(2106), 6)
+        self.assertEqual(odd_Days(2107), 0)
+        self.assertEqual(odd_Days(2108), 6)
+        self.assertEqual(odd_Days(2109), 1)
+
+    def test_zero(self):
+        self.assertEqual(odd_Days(0), None)
+
+    def test_negative_numbers(self):
+        self.assertEqual(odd_Days(-1), None)
+        self.assertEqual(odd_Days(-2000), None)
+        self.assertEqual(odd_Days(-2001), None)
+        self.assertEqual(odd_Days(-2002), None)
+        self.assertEqual(odd_Days(-2003), None)
+        self.assertEqual(odd_Days(-2004), None)
+        self.assertEqual(odd_Days(-2005), None)
+        self.assertEqual(odd_Days(-2006), None)
+        self.assertEqual(odd_Days(-2007), None)
+        self.assertEqual(odd_Days(-2008), None)
+        self.assertEqual(odd_Days(-2009), None)
+        self.assertEqual(odd_Days(-2100), None)
+        self.assertEqual(odd_Days(-2101), None)
+        self.assertEqual(odd_Days(-2102), None)
+        self.assertEqual(odd_Days(-2103), None)
+        self.assertEqual(odd_Days(-2104), None)
+        self.assertEqual(odd_Days(-2105), None)
+        self.assertEqual(odd_Days(-2106), None)
+        self.assertEqual(odd_Days(-2107), None)
+        self.assertEqual(odd_Days(-2108), None)
+        self.assertEqual(odd_Days(-2109), None)

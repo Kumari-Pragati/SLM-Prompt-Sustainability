@@ -1,0 +1,27 @@
+import unittest
+from mbpp_80_code import tetrahedral_number
+
+class TestTetrahedralNumber(unittest.TestCase):
+
+    def test_positive_integers(self):
+        self.assertEqual(tetrahedral_number(1), 1)
+        self.assertEqual(tetrahedral_number(2), 4)
+        self.assertEqual(tetrahedral_number(3), 10)
+        self.assertEqual(tetrahedral_number(4), 20)
+        self.assertEqual(tetrahedral_number(5), 35)
+
+    def test_zero(self):
+        self.assertEqual(tetrahedral_number(0), 0)
+
+    def test_negative_integers(self):
+        self.assertEqual(tetrahedral_number(-1), 0)
+        self.assertEqual(tetrahedral_number(-2), 0)
+        self.assertEqual(tetrahedral_number(-3), 0)
+
+    def test_non_integer_input(self):
+        with self.assertRaises(TypeError):
+            tetrahedral_number(1.5)
+
+    def test_large_input(self):
+        with self.assertRaises(OverflowError):
+            tetrahedral_number(10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

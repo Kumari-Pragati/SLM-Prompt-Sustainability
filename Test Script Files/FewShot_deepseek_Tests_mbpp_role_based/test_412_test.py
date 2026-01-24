@@ -1,0 +1,30 @@
+import unittest
+from mbpp_412_code import remove_odd
+
+class TestRemoveOdd(unittest.TestCase):
+    def test_typical_use_case(self):
+        self.assertEqual(remove_odd([1, 2, 3, 4, 5]), [2, 4])
+
+    def test_empty_list(self):
+        self.assertEqual(remove_odd([]), [])
+
+    def test_all_odd_numbers(self):
+        self.assertEqual(remove_odd([1, 3, 5]), [])
+
+    def test_all_even_numbers(self):
+        self.assertEqual(remove_odd([2, 4, 6]), [2, 4, 6])
+
+    def test_mixed_numbers(self):
+        self.assertEqual(remove_odd([1, 2, 3, 4]), [2, 4])
+
+    def test_negative_numbers(self):
+        self.assertEqual(remove_odd([-1, -2, -3, -4]), [-2, -4])
+
+    def test_large_numbers(self):
+        self.assertEqual(remove_odd([100, 200, 300, 400]), [200, 400])
+
+    def test_single_number(self):
+        self.assertEqual(remove_odd([2]), [2])
+
+    def test_duplicate_numbers(self):
+        self.assertEqual(remove_odd([2, 2, 2]), [2, 2, 2])

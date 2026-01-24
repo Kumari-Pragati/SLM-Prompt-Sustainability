@@ -1,0 +1,41 @@
+import unittest
+from mbpp_944_code import num_position
+
+class TestNumPosition(unittest.TestCase):
+
+    def test_num_position(self):
+        self.assertEqual(num_position("Hello123World"), 6)
+        self.assertEqual(num_position("Hello456World"), 6)
+        self.assertEqual(num_position("Hello789World"), 6)
+        self.assertEqual(num_position("Hello123456789World"), 6)
+        self.assertEqual(num_position("Hello1234567890World"), 6)
+        self.assertEqual(num_position("Hello1234567890World123"), 6)
+        self.assertEqual(num_position("Hello1234567890World123456"), 6)
+        self.assertEqual(num_position("Hello1234567890World123456789"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World123"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World123456"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World123456789"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World123"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World123456"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World123456789"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World123"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World123456"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World123456789"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World123"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World123456"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World123456789"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World1234567890"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World1234567890World"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World1234567890World123"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World1234567890World123456"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World1234567890World123456789"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World1234567890World1234567890World1234567890"), 6)
+        self.assertEqual(num_position("Hello1234567890World1234567890World1234567890World1234567890World123

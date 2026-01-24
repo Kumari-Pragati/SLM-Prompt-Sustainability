@@ -1,0 +1,42 @@
+import unittest
+from mbpp_180_code import distance_lat_long
+
+class TestDistanceLatLong(unittest.TestCase):
+
+    def test_distance_lat_long(self):
+        self.assertAlmostEqual(distance_lat_long(0, 0, 0, 0), 0, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 0, 45, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 0, 90, 90), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 0, 0, 90), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 0, 0, 180), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 0, 0, 270), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 0, 0, 360), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 45, 0, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 45, 90, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 45, 0, 90), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 45, 0, 180), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 45, 0, 270), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 45, 0, 360), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 90, 0, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 90, 90, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 90, 0, 90), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 90, 0, 180), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 90, 0, 270), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 90, 0, 360), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 180, 0, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 180, 90, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 180, 0, 90), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 180, 0, 180), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 180, 0, 270), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 180, 0, 360), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 270, 0, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 270, 90, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 270, 0, 90), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 270, 0, 180), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 270, 0, 270), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 270, 0, 360), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 360, 0, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 360, 90, 45), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 360, 0, 90), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 360, 0, 180), 6371.01, places=5)
+        self.assertAlmostEqual(distance_lat_long(0, 360, 0, 270

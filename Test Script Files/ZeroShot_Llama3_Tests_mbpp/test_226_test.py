@@ -1,0 +1,37 @@
+import unittest
+from mbpp_226_code import odd_values_string
+
+class TestOddValuesString(unittest.TestCase):
+
+    def test_odd_values_string(self):
+        self.assertEqual(odd_values_string("Hello"), "Hlo")
+        self.assertEqual(odd_values_string("Python"), "Pto")
+        self.assertEqual(odd_values_string("Unittest"), "Un")
+        self.assertEqual(odd_values_string("Test"), "T")
+        self.assertEqual(odd_values_string(""), "")
+        self.assertEqual(odd_values_string("a"), "a")
+        self.assertEqual(odd_values_string("ab"), "a")
+        self.assertEqual(odd_values_string("abc"), "a")
+        self.assertEqual(odd_values_string("abcd"), "a")
+        self.assertEqual(odd_values_string("abcde"), "a")
+        self.assertEqual(odd_values_string("abcdef"), "a")
+        self.assertEqual(odd_values_string("abcdefg"), "a")
+        self.assertEqual(odd_values_string("abcdefgh"), "a")
+        self.assertEqual(odd_values_string("abcdefghi"), "a")
+        self.assertEqual(odd_values_string("abcdefghij"), "a")
+        self.assertEqual(odd_values_string("abcdefghijk"), "a")
+        self.assertEqual(odd_values_string("abcdefghijkl"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklm"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmn"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmno"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnop"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopq"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqr"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqrs"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqrst"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqrstu"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqrstuv"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqrstuvw"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqrstuvwx"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqrstuvwxy"), "a")
+        self.assertEqual(odd_values_string("abcdefghijklmnopqrstuvwxyz"), "a")

@@ -1,0 +1,33 @@
+import unittest
+from mbpp_484_code import remove_matching_tuple
+
+class TestRemoveMatchingTuple(unittest.TestCase):
+    def test_typical_case(self):
+        test_list1 = [(1, 2), (3, 4), (5, 6)]
+        test_list2 = [(1, 2), (7, 8)]
+        expected_output = [(3, 4), (5, 6)]
+        self.assertEqual(remove_matching_tuple(test_list1, test_list2), expected_output)
+
+    def test_empty_lists(self):
+        test_list1 = []
+        test_list2 = []
+        expected_output = []
+        self.assertEqual(remove_matching_tuple(test_list1, test_list2), expected_output)
+
+    def test_one_empty_list(self):
+        test_list1 = [(1, 2), (3, 4), (5, 6)]
+        test_list2 = []
+        expected_output = [(1, 2), (3, 4), (5, 6)]
+        self.assertEqual(remove_matching_tuple(test_list1, test_list2), expected_output)
+
+    def test_all_matching_tuples(self):
+        test_list1 = [(1, 2), (3, 4), (5, 6)]
+        test_list2 = [(1, 2), (3, 4), (5, 6)]
+        expected_output = []
+        self.assertEqual(remove_matching_tuple(test_list1, test_list2), expected_output)
+
+    def test_none_matching_tuples(self):
+        test_list1 = [(1, 2), (3, 4), (5, 6)]
+        test_list2 = [(7, 8), (9, 10), (11, 12)]
+        expected_output = [(1, 2), (3, 4), (5, 6)]
+        self.assertEqual(remove_matching_tuple(test_list1, test_list2), expected_output)

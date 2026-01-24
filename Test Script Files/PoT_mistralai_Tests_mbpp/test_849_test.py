@@ -1,0 +1,39 @@
+import unittest
+from mbpp_849_code import Sum
+
+class TestSum(unittest.TestCase):
+    def test_typical_cases(self):
+        self.assertEqual(Sum(2), 1)
+        self.assertEqual(Sum(4), 3)
+        self.assertEqual(Sum(6), 5)
+        self.assertEqual(Sum(10), 15)
+        self.assertEqual(Sum(20), 31)
+
+    def test_edge_and_boundary_cases(self):
+        self.assertEqual(Sum(1), 0)
+        self.assertEqual(Sum(3), 3)
+        self.assertEqual(Sum(5), 4)
+        self.assertEqual(Sum(7), 7)
+        self.assertEqual(Sum(8), 3)
+        self.assertEqual(Sum(9), 9)
+        self.assertEqual(Sum(11), 11)
+        self.assertEqual(Sum(12), 7)
+        self.assertEqual(Sum(13), 13)
+        self.assertEqual(Sum(14), 10)
+        self.assertEqual(Sum(15), 24)
+        self.assertEqual(Sum(16), 13)
+        self.assertEqual(Sum(17), 17)
+        self.assertEqual(Sum(18), 15)
+        self.assertEqual(Sum(19), 19)
+        self.assertEqual(Sum(21), 21)
+        self.assertEqual(Sum(22), 17)
+        self.assertEqual(Sum(23), 23)
+        self.assertEqual(Sum(24), 20)
+        self.assertEqual(Sum(25), 41)
+        self.assertEqual(Sum(26), 23)
+        self.assertEqual(Sum(27), 27)
+        self.assertEqual(Sum(28), 19)
+        self.assertEqual(Sum(29), 29)
+        self.assertEqual(Sum(30), 46)
+        self.assertEqual(Sum(31), 31)
+        self.assertEqual(Sum(32), 31)

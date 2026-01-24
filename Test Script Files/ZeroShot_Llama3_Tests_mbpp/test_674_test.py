@@ -1,0 +1,40 @@
+import unittest
+from mbpp_674_code import remove_duplicate
+
+class TestRemoveDuplicate(unittest.TestCase):
+
+    def test_remove_duplicate(self):
+        self.assertEqual(remove_duplicate("Hello World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World"), "Hello World")
+        self.assertEqual(remove_duplicate("Hello World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World World

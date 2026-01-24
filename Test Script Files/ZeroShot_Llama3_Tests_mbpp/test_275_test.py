@@ -1,0 +1,41 @@
+import unittest
+from mbpp_275_code import get_Position
+
+class TestGet_Position(unittest.TestCase):
+
+    def test_get_Position(self):
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 1), 5)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 2), 5)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 3), 5)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 4), 5)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 5), 5)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 6), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 7), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 8), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 9), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 10), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 11), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 12), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 13), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 14), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 15), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 16), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 17), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 18), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 19), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 20), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 21), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 22), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 23), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 24), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 25), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 26), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 27), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 28), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 29), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 30), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 31), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 32), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 33), 1)
+        self.assertEqual(get_Position([1, 2, 3, 4, 5], 5, 34), 1)
+        self.assertEqual(get_Position([1, 2,
